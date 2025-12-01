@@ -1,0 +1,72 @@
+# ---- Python cache ----
+
+**pycache**/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+
+# ---- Virtual environments ----
+
+download_venv/
+env/
+.download_venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ---- IDE & editors ----
+
+# VSCode
+
+.vscode/
+
+# PyCharm
+
+.idea/
+
+# ---- OS / system files ----
+
+# Windows
+
+Thumbs.db
+Desktop.ini
+
+# macOS
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ---- Logs & temp ----
+
+*.log
+*.tmp
+*.temp
+
+# ---- Build & packaging ----
+
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# ---- Jupyter ----
+
+.ipynb_checkpoints/
+
+# ---- Project-specific ----
+
+# If you have sample downloads or test folders with files — ignore them:
+
+downloads_test/
+test_downloads/
+sample_data/
+
+# ---- Environment / secrets ----
+
+.env
+*.env
+.env.*
