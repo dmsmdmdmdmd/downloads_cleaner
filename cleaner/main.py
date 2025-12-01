@@ -1,14 +1,25 @@
+import argparse
 from pathlib import Path
 from .organizer import organize_downloads
+from .gui import run_gui
 
 
 def main():
-    downloads_path = Path(r"D:\Загрузки")
-    print(f"📁 Сортировка файлов в: {downloads_path}")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--path", type=str, help="Путь к папке для сортировки")
+    parser.add_argument("--gui", action="store_true", help="Запуск графического интерфейса")
+    args = parser.parse_args()
 
-    organize_downloads(downloads_path)
+    # Запуск GUI
+    if args.gui:
+        run_gui()
+        return
 
-    print("✨ Готово! Папка «Загрузки» приведена в порядок.")
+    # Запуск CLI
+    download_path = Path(args.path) if args.path else Path.home() / "Downloads"
+
+    organize_downloads(download_path)
+    print("Сортировка завершена")
 
 
 if __name__ == "__main__":
